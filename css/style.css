@@ -1,6 +1,18 @@
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#map{
+  width:1000px;
+  height:800px;
+}
+
+
 #legend{
 font-size: 0.85em;
-position: absolute;
+position: relative;
 display: grid;
 grid-template-columns: repeat(5,max-content);
 margin-top: -4em;
@@ -8,16 +20,24 @@ z-index: 3000;
 padding: 0.8em;
 background: hsla(0,0%,100%,.95) border-box;
 overflow: hidden;
+align-items: center;
 border-radius: .3em;
 box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
             0 .5em 1em rgba(0, 0, 0, 0.3);
 text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
-left: 800px;
-top: 200px;
+margin-left: -10em;
+
+overflow-x: scroll;
 }
 
 .wrapper{
-  display: flex;;
+  display: flex;
+  justify-content: center;
+}
+
+#legend label,input{
+  margin-top: 0.44em;
+padding: 0 0.6em;
 }
 
 #legend > span  {
@@ -29,12 +49,21 @@ padding: 0 0.6em
 
 
 @media only screen and (max-width: 1024px) {
-
+.wrapper{
+  width: 100%;
+}
 #legend{
   left: 0;
   top: 0;
   position: relative;
+  width: 100%!important;
   margin-top: -10em;
+  margin-left: 0;
+
+}
+
+#legen > span{
+  width: 100%!important;
 }
 .wrapper{
   display: block;
