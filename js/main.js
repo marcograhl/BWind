@@ -267,9 +267,9 @@ veteranRadio.addEventListener('click', (e) => {
 legendBarbColor(dataSpeedArray, initVars);
 getLocationBadegewaesser(initVars);
 
-//update the marker all 5min if you have Internet
+//update the marker all 5min if you have Internet/ set to longer don\t wanna reach limit to fast
 if (online) {
-  setInterval(getLocationBadegewaesser, 300000);
+  setInterval(getLocationBadegewaesser, 30000000);
 }
 
 
